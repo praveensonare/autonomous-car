@@ -1,0 +1,27 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '6.6.3'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("net.logstash.logback:logstash-logback-encoder:7.3")
+
+    //testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("junit:junit:4.13.2")
+
+}
